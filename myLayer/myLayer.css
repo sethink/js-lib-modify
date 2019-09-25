@@ -1,0 +1,14 @@
+.myLayer_mask{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0D0D0D;
+}
+
+
+#myLayer_box>.box{
+    background-color: red;
+}

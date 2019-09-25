@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文档标题</title>
+</head>
+
+<body>
+<div>测试跳转
+<button onclick="tt()">open</button>
+</div>
+</body>
+ <script>
+     document.write('<script src="./myLayer.js?ver='+Math.random()+'" type="text/javascript"><\/script>');
+
+     function tt(){
+         myLayer({
+             type:'close'
+         });
+     }
+ </script>
+</html>
