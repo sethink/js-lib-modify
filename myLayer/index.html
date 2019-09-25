@@ -14,24 +14,6 @@
 <script>
     document.write('<script src="./myLayer.js?ver='+Math.random()+'" type="text/javascript"><\/script>');
 
-
-    window.onload = function (ev) {
-        var jsPath = document.currentScript ? document.currentScript.src : function(){
-            var js = document.scripts
-                ,last = js.length - 1
-                ,src;
-            for(var i = last; i > 0; i--){
-                if(js[i].readyState === 'interactive'){
-                    src = js[i].src;
-                    break;
-                }
-            }
-            return src || js[last].src;
-        }();
-        var rs =  jsPath.substring(0, jsPath.lastIndexOf('/') + 1);
-        console.log(rs);
-    };
-
     function open_iframe(){
         myLayer({
             url:'./iframe.html'
