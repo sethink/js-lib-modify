@@ -116,8 +116,8 @@
             var percent_h = self.config['area'][1].substring(self.config['area'][1].length - 1) == '%' ? self.config['area'][1].substring(0, self.config['area'][1].length - 1) : self.config['area'][1];
 
 
-            var top_bottom = winHeight * ((percent_h / 100) / 2);
-            var left_right = winWidth * ((percent_w / 100) / 2);
+            var top_bottom = winHeight * ((1 - (percent_h / 100)) / 2);
+            var left_right = winWidth * ((1 - (percent_w / 100)) / 2);
 
             self.modelBox.style.position = 'absolute';
             self.modelBox.style.zIndex = 1000;
