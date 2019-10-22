@@ -19,7 +19,8 @@
             bgWhite: false,
             clickDomCancel: false,
             callback: null,
-            type: "success"
+            type: "success",
+            icon: true
         },
 
         _init: function () {
@@ -78,7 +79,7 @@
 
                 if (self.config.bgWhite) {
                     html = '<div class="mask_white"></div>'
-                }else{
+                } else {
                     html = '<div class="mask"></div>'
                 }
 
@@ -155,10 +156,17 @@
         tipRender: function () {
             var self = this;
 
-            var html = "<div class='tip'>";
-            html += "<div class='icon'>i</div>";
-            html += "<div class='dec_txt'>" + self.config.msg + "</div>";
-            html += "</div>";
+            var html = '';
+            if (self.config.icon) {
+                html += "<div class='tip'>";
+                html += "<div class='icon'>i</div>";
+                html += "<div class='dec_txt'>" + self.config.msg + "</div>";
+                html += "</div>";
+            } else {
+                html += "<div class='tip'>";
+                html += "<div class='dec_txt' style='text-align: left;padding-left: 10px;'>" + self.config.msg + "</div>";
+                html += "</div>";
+            }
 
             self.modelBox.innerHTML = html;
         },

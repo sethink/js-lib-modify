@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
-    <link rel="stylesheet" type="text/css" href="参考项目/dialog.css">
+    <link rel="stylesheet" type="text/css" href="./dialog.css">
     <style>
         .bg {
             width: 100%;
@@ -49,6 +49,7 @@
     // bgWhite:false, 背景是否为白色 *默认不是白色
     // clickDomCancel:false, 点击遮罩层，弹出效果立即消失 *默认false
     // callback:null, 执行完动画后的回调函数 *默认null
+    // icon: true, 是否显示图标，默认true
 
     function success() {
         popup({
@@ -78,7 +79,7 @@
     }
 
     function tip() {
-        popup({type: 'tip', msg: "提示信息", delay: null});
+        popup({type: 'tip', msg: "提示信息", delay: null,icon:false,height:'80px'});
     }
 
 
