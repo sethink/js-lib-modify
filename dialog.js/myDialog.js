@@ -3,6 +3,7 @@
 
     var Dialog = function (cfg) {
         this.config.callback = null;
+        this.extend(this.config, this.config_init);
         this.extend(this.config, cfg);
 
         this._init();
@@ -10,6 +11,20 @@
 
     Dialog.prototype = {
         config: {
+            width: 180,
+            height: 150,
+            msg: '操作成功',
+            winDom: window,
+            delay: 0,
+            bg: true,
+            bgWhite: false,
+            clickDomCancel: false,
+            callback: null,
+            type: "success",
+            icon: true
+        },
+
+        config_init: {
             width: 180,
             height: 150,
             msg: '操作成功',
